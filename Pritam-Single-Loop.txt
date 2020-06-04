@@ -1,0 +1,28 @@
+#include<stdio.h>
+void PrintTriangle(int);
+int main()
+{
+	int n;
+	printf("Enter the no of line\t");
+	scanf("%d",&n);
+	PrintTriangle(n);
+	return 0;
+}
+void PrintTriangle(int s){
+	int space=s-1;
+	int star=s;
+	for( space=s-1; space>0; )
+	{
+		if(star>space){
+			printf("* ");
+			star--;
+			continue;
+		}
+		
+		if(star==space){
+			printf("\n");
+			space--;
+			star=s;
+		}
+	}
+}
